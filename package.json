@@ -26,7 +26,7 @@
     "examples"
   ],
   "scripts": {
-    "test": "node --test",
+    "test": "node --test tests/doctor.test.mjs tests/init.test.mjs tests/preserve.test.mjs tests/safety.test.mjs tests/scope.test.mjs",
     "verify": "bash scripts/verify.sh"
   }
 }

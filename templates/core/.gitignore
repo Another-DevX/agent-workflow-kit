@@ -1,0 +1,3 @@
+# Agent workflow runtime state (ephemeral, git-ignored)
+.worktrees/
+.orchestration/
