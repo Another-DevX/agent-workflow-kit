@@ -13,6 +13,7 @@ import {
   findNamedFiles,
   snapshot,
   DEFAULT_CHECKS,
+  ROOT,
 } from './helpers.mjs';
 
 test('help exits 0 and prints usage', async () => {
@@ -61,8 +62,9 @@ test('fresh init scaffolds managed files, config and manifest', async () => {
     // Manifest is versioned JSON that records content hashes. The exact shape
     // is intentionally not asserted.
     const manifest = await readJson(join(repo, '.agent-workflow', 'manifest.json'));
+    const pkg = await readJson(join(ROOT, 'package.json'));
     assert.ok(
-      JSON.stringify(manifest).includes('0.1.0'),
+      JSON.stringify(manifest).includes(pkg.version),
       'manifest should record the package version',
     );
     assert.ok(containsSha256(manifest), 'manifest should record at least one sha256 hash');
