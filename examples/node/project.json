@@ -1,0 +1,6 @@
+{
+  "verifyCommand": "npm test",
+  "verifyFullCommand": "npm run verify:full",
+  "setupCommand": "npm ci",
+  "scopeDocument": "docs/agent-workflow/scope.md"
+}
