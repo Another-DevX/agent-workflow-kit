@@ -1,8 +1,14 @@
 # Agent Workflow Kit — templates
 
 Portable OpenCode V2 workflow templates. This directory is the source the CLI
-copies into a target repository. It contains **no** `AGENTS.md` and **no**
-`.gitignore` fragment — the CLI owns those via its managed blocks.
+copies into a target repository.
+
+`templates/core/AGENTS.md` and `templates/core/.gitignore.tmpl` are the bodies
+the CLI installs into **managed marker blocks** inside the target's own
+`AGENTS.md` and `.gitignore`, preserving everything the user wrote around them.
+The `.tmpl` suffix on the ignore file is deliberate: npm strips a real
+`.gitignore` from the published tarball, so the template ships renamed and the
+CLI maps it back (`stripTemplateSuffix`).
 
 ## Install mapping
 
@@ -81,8 +87,9 @@ case:
 - `.review/<iteration>/` — review-session evidence; **tracked** and committed
   before the final verification.
 
-The CLI owns the managed `.gitignore` blocks that ignore the first two and keep
-the third; templates do not ship `.gitignore`.
+The CLI installs the managed `.gitignore` block (from
+`templates/core/.gitignore.tmpl`) that ignores the first two and keeps the
+third tracked.
 
 ## Worktree helper
 
