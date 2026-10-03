@@ -1,0 +1,6 @@
+{
+  "verifyCommand": "pytest -q",
+  "verifyFullCommand": "bash scripts/verify-full.sh",
+  "setupCommand": "python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt",
+  "scopeDocument": "docs/agent-workflow/scope.md"
+}

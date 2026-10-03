@@ -1,0 +1,50 @@
+name: verify
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: node ${{ matrix.node }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+        node:
+          - 20
+          - 22
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Show toolchain
+        run: |
+          node --version
+          npm --version
+          git --version
+
+      # The package has zero runtime dependencies, so no install step is needed.
+      # `--if-present` keeps this meaningful before a test script exists; the
+      # canonical script below always runs the node:test suite.
+      - name: npm test
+        run: npm test --if-present
+        shell: bash
+
+      - name: Canonical verification
+        run: ./scripts/verify.sh
+        shell: bash
