@@ -1,0 +1,32 @@
+{
+  "name": "@another-devx/agent-workflow",
+  "version": "0.1.0",
+  "description": "Bounded agent workflow kit: install and maintain an OpenCode project workflow with isolated worktrees, managed templates, and verification contracts.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "agent-workflow": "bin/workflow.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Another-DevX/agent-workflow-kit.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "templates",
+    "README.md",
+    "docs",
+    "examples"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "verify": "bash scripts/verify.sh"
+  }
+}
