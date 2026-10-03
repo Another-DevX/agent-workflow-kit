@@ -1,6 +1,6 @@
 {
-  "name": "@another-devx/agent-workflow",
-  "version": "0.1.0",
+  "name": "@anotherdev/agent-workflow",
+  "version": "0.1.1",
   "description": "Bounded agent workflow kit: install and maintain an OpenCode project workflow with isolated worktrees, managed templates, and verification contracts.",
   "license": "MIT",
   "type": "module",

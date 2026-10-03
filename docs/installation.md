@@ -6,9 +6,7 @@ is no build step and no install step required to run it.
 ## Status of distribution channels
 
 - **GitHub:** available now.
-- **npm registry (`@another-devx/agent-workflow`):** **not published yet.**
-  Registry authentication is not available in the current environment. npm
-  instructions are therefore marked *after npm publication*.
+- **npm registry (`@anotherdev/agent-workflow`):** available now.
 - **License:** MIT.
 
 ## From GitHub with `npx` or `bunx`
@@ -18,13 +16,13 @@ is recommended.
 
 ```sh
 # npm
-npx github:Another-DevX/agent-workflow-kit#v0.1.0 init --verify "npm test"
+npx github:Another-DevX/agent-workflow-kit#v0.1.1 init --verify "npm test"
 
 # Bun (optional)
-bunx github:Another-DevX/agent-workflow-kit#v0.1.0 init --verify "npm test"
+bunx github:Another-DevX/agent-workflow-kit#v0.1.1 init --verify "npm test"
 ```
 
-Without the `#v0.1.0` suffix, the default branch is used.
+Without the `#v0.1.1` suffix, the default branch is used.
 
 > The `v0.1.0` tag must exist on the repository for the pinned form to work.
 > This install path is the intended one and will be validated against the
@@ -63,11 +61,11 @@ gh repo clone Another-DevX/agent-workflow-kit
 
 ```sh
 # One-off
-npx @another-devx/agent-workflow@0.1.0 init --verify "npm test"
-bunx @another-devx/agent-workflow@0.1.0 init --verify "npm test"
+npx @anotherdev/agent-workflow@0.1.1 init --verify "npm test"
+bunx @anotherdev/agent-workflow@0.1.1 init --verify "npm test"
 
 # As a dev dependency
-npm install --save-dev @another-devx/agent-workflow
+npm install --save-dev @anotherdev/agent-workflow
 npx agent-workflow init --verify "npm test"
 ```
 

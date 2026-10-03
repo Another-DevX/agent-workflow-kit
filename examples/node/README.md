@@ -24,7 +24,7 @@ full check.
 
 ```sh
 # From GitHub (available now)
-npx github:Another-DevX/agent-workflow-kit#v0.1.0 init \
+npx github:Another-DevX/agent-workflow-kit#v0.1.1 init \
   --verify "npm test" \
   --verify-full "npm run verify:full" \
   --setup "npm ci"

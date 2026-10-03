@@ -18,12 +18,12 @@ verification commands.
 | --- | --- |
 | Source repository | Public on GitHub: [`Another-DevX/agent-workflow-kit`](https://github.com/Another-DevX/agent-workflow-kit) |
 | License | [MIT](./LICENSE) |
-| npm package `@another-devx/agent-workflow` | **Not published yet.** The package is ready to publish, but npm registry authentication is not available in this environment. |
+| npm package `@anotherdev/agent-workflow` | Published on npm as [`@anotherdev/agent-workflow@0.1.1`](https://www.npmjs.com/package/@anotherdev/agent-workflow). |
 | GitHub install (`npx` / `bunx` / clone) | The intended direct-install path. It requires the `v0.1.0` tag to exist on the repository. |
 
-Because the npm package is not published yet, npm-based instructions below are
-explicitly marked **after npm publication**. Use the GitHub or local-clone paths
-today.
+The package is published on the public npm registry, so the `npx`/`bunx` paths
+below work directly. The GitHub and local-clone paths remain available as
+alternatives.
 
 ## Requirements
 
@@ -40,15 +40,15 @@ No installation step is required: the kit has no runtime dependencies.
 ### 1. Directly from GitHub (available now)
 
 `npx` and `bunx` can run a package straight from a GitHub repository. The
-`#v0.1.0` suffix pins the release tag; without it, the repository's default
+`#v0.1.1` suffix pins the release tag; without it, the repository's default
 branch is used.
 
 ```sh
 # npm / npx
-npx github:Another-DevX/agent-workflow-kit#v0.1.0 init --verify "npm test"
+npx github:Another-DevX/agent-workflow-kit#v0.1.1 init --verify "npm test"
 
 # Bun / bunx (optional)
-bunx github:Another-DevX/agent-workflow-kit#v0.1.0 init --verify "npm test"
+bunx github:Another-DevX/agent-workflow-kit#v0.1.1 init --verify "npm test"
 ```
 
 ### 2. From a local clone (available now)
@@ -80,11 +80,11 @@ gh repo clone Another-DevX/agent-workflow-kit
 
 ```sh
 # One-off run
-npx @another-devx/agent-workflow@0.1.0 init --verify "npm test"
-bunx @another-devx/agent-workflow@0.1.0 init --verify "npm test"
+npx @anotherdev/agent-workflow@0.1.1 init --verify "npm test"
+bunx @anotherdev/agent-workflow@0.1.1 init --verify "npm test"
 
 # Install as a dev dependency
-npm install --save-dev @another-devx/agent-workflow
+npm install --save-dev @anotherdev/agent-workflow
 npx agent-workflow init --verify "npm test"
 ```
 
@@ -220,7 +220,7 @@ independent review, and promotion controls as the real safety net.
 Managed files are tracked by hash in `.agent-workflow/manifest.json`.
 
 - **From a clone:** pull the new version, then run `update`.
-- **After npm publication:** run `npx @another-devx/agent-workflow@<version> update`.
+- **After npm publication:** run `npx @anotherdev/agent-workflow@<version> update`.
 - **From GitHub:** `npx github:Another-DevX/agent-workflow-kit#v<version> update`.
 
 ```sh

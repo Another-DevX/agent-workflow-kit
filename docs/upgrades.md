@@ -46,11 +46,11 @@ same result and does not duplicate managed content or grow the manifest.
 Pin a tag for reproducible upgrades:
 
 ```sh
-npx github:Another-DevX/agent-workflow-kit#v0.1.0 update
+npx github:Another-DevX/agent-workflow-kit#v0.1.1 update
 ```
 
 After npm publication:
 
 ```sh
-npx @another-devx/agent-workflow@0.1.0 update
+npx @anotherdev/agent-workflow@0.1.1 update
 ```

@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-03
+
+### Fixed
+
+- Ship the managed `.gitignore` block template as `.gitignore.tmpl` so npm does
+  not strip it from the published tarball; `npx` installs now create the
+  `.gitignore` block.
+- Resolve the CLI package root from `lib/` instead of one directory above, so
+  packaged templates are found.
+- Run the test suite from explicit files so vendored worktrees are never
+  discovered.
+
+### Changed
+
+- Publish under the `@anotherdev` npm scope.
+
 ## [0.1.0] - 2026-10-03
 
 Initial release of the Agent Workflow Kit.
@@ -39,9 +55,9 @@ Initial release of the Agent Workflow Kit.
 
 - Licensed under the MIT License.
 - Requires Node.js >= 20; zero runtime dependencies.
-- The npm package `@another-devx/agent-workflow` is **not published yet**
-  (registry authentication was not available at release time). Until then, use
-  the GitHub `npx`/`bunx` path or a local clone.
+- The npm package `@anotherdev/agent-workflow` is published on the public npm
+  registry. You can also use the GitHub `npx`/`bunx` path or a local clone.
 
-[Unreleased]: https://github.com/Another-DevX/agent-workflow-kit/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/Another-DevX/agent-workflow-kit/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/Another-DevX/agent-workflow-kit/releases/tag/v0.1.1
 [0.1.0]: https://github.com/Another-DevX/agent-workflow-kit/releases/tag/v0.1.0

@@ -14,7 +14,7 @@ pyproject.toml        # ruff configuration
 
 ```sh
 # From GitHub (available now)
-npx github:Another-DevX/agent-workflow-kit#v0.1.0 init \
+npx github:Another-DevX/agent-workflow-kit#v0.1.1 init \
   --verify "pytest -q" \
   --verify-full "bash scripts/verify-full.sh" \
   --setup "python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt"
